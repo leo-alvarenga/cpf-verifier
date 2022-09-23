@@ -124,6 +124,11 @@ func getVerificationDigits(cpf []int) [2]int {
 	return digits
 }
 
+/*
+Verifies whether or not a CPF, passed as argument, is valid;
+Returns (true, <nil>) if the provided CPF is valid,
+otherwise returns (false, error), with further explaination on why it is not valid
+*/
 func Verify(cpf string) (bool, error) {
 	processed := removeUnwantedCharacters(cpf)
 
@@ -153,6 +158,7 @@ func Verify(cpf string) (bool, error) {
 	return true, nil
 }
 
+/* Returns a pseudo-randomly generated valid CPF as a string */
 func GenerateCPF() string {
 	cpf := ""
 	numbers := []int{}
