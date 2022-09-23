@@ -30,7 +30,7 @@ func isThisAValidChar(needle rune) bool {
 }
 
 func parseToInt(num rune) int {
-	wanted := []rune{'1', '2', '3', '4', '5', '6', '7', '8', '9', '0'}
+	wanted := []rune{'0', '1', '2', '3', '4', '5', '6', '7', '8', '9'}
 
 	low := 0
 	high := len(wanted) - 1
@@ -91,18 +91,18 @@ func isThisADummyCPF(cpf string) bool {
 func getVerificationDigits(cpf []int) [2]int {
 	digits := [2]int{0, 0}
 	counts := [2]int{10, 11}
+	var cp []int
 
-	if len(cpf) < 11 {
-		cpf = append(cpf, 0)
-		cpf = append(cpf, 0)
+	cp = append(cp, cpf...)
+
+	if len(cp) < 11 {
+		cp = append(cp, 0, 0)
 	}
 
-	sum := 0
-	count := 0
 	for i, c := range counts {
-		sum = 0
-		count = c
-		for _, n := range cpf {
+		sum := 0
+		count := c
+		for _, n := range cp {
 			sum += n * count
 			count--
 
@@ -118,7 +118,7 @@ func getVerificationDigits(cpf []int) [2]int {
 			digits[i] = 11 - remainer
 		}
 
-		cpf[c-1] = digits[i]
+		cp[9] = digits[0]
 	}
 
 	return digits
@@ -141,6 +141,7 @@ func Verify(cpf string) (bool, error) {
 	}
 
 	digits := getVerificationDigits(numbers)
+
 	if numbers[9] != digits[0] {
 		return false, fmt.Errorf("invalid first verifier digit! expected '%d'; got '%d'", digits[0], numbers[9])
 	}
@@ -172,5 +173,4 @@ func GenerateCPF() string {
 }
 
 func main() {
-
 }
