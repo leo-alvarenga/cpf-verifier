@@ -7,7 +7,7 @@ A small Go package to facilitate CPF* validation.
 ## Usage
 To import and use the package, first download it:
 ```bash
-go get github.com/leo-alvarenga/cpf-verifier@v1
+go get github.com/leo-alvarenga/cpf-verifier@v1.0.0
 ```
 
 ### Implementation
