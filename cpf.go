@@ -1,4 +1,4 @@
-package main
+package cpf
 
 import (
 	"fmt"
@@ -176,7 +176,4 @@ func GenerateCPF() string {
 	}
 
 	return cpf
-}
-
-func main() {
 }
