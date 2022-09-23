@@ -1,5 +1,24 @@
 # CPF verifier
 
+<p align="center">
+	<a href="https://github.com/leo-alvarenga/cpf-verifier/actions/workflows/integrate.yml">
+		<img src="https://github.com/leo-alvarenga/cpf-verifier/actions/workflows/integrate.yml/badge.svg" alt="Integration Tests">
+	</a>
+	<a href="https://goreportcard.com/report/github.com/leo-alvarenga/cpf-verifier">
+		<img src="https://goreportcard.com/badge/github.com/leo-alvarenga/cpf-verifier" alt="Go Report Card">
+	</a>
+	<a href="https://github.com/leo-alvarenga/cpf-verifier/blob/main/LICENSE.txt">
+		<img src="https://img.shields.io/github/license/leo-alvarenga/cpf-verifier" alt="License">
+	</a>	
+	<img src="https://img.shields.io/github/go-mod/go-version/leo-alvarenga/cpf-verifier" alt="License">
+	<a href="https://gitHub.com/leo-alvarenga/cpf-verifier/releases/">
+		<img src="https://img.shields.io/github/v/tag/leo-alvarenga/cpf-verifier?sort=semver" alt="GitHub release">
+	</a>	
+	<a href="https://pkg.go.dev/github.com/leo-alvarenga/cpf-verifier">
+		<img src="https://img.shields.io/badge/dev-reference-007d9c?logo=go&logoColor=white&style=flat" alt="pkg.go.dev docs">
+	</a>
+</p>
+
 A small Go package to facilitate CPF* validation.
 
 (*) _Cadastro de Pessoa Física_, a brazilian counterpart to the american Social Security Number
@@ -7,7 +26,7 @@ A small Go package to facilitate CPF* validation.
 ## Usage
 To import and use the package, first retrieve it:
 ```bash
-go get github.com/leo-alvarenga/cpf-verifier@v1.0.1
+go get github.com/leo-alvarenga/cpf-verifier@v1
 ```
 
 ## Implementation
