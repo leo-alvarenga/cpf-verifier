@@ -1,6 +1,8 @@
 # CPF verifier
 
-A tiny Go package to facilitate CPF (Cadastro de Pessoa Física, a brazilian counterpart to the american Social Security Number) validation.
+A small Go package to facilitate CPF* validation.
+
+(*) _Cadastro de Pessoa Física_, a brazilian counterpart to the american Social Security Number
 
 ## Usage
 To import and use the package, first download it:
